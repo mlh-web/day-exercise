@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    创建函数：
+      1.声明函数 使用function语句声明函数
+      2.匿名函数，就是一个表达式，即函数表达式（没有函数名），可作为一个值赋值给变量或对象等
+      3.构造函数 function（"参数名1"，"参数名2"，"参数名n"，"结构体"）
+    */
+
+    //函数声明
+    /* function fn1(){
+      console.log(1);
+    }
+    fn1(); */
+
+    //函数表达式
+    /* var fn2=function(){
+      console.log(2);
+    }
+    fn2(); */
+
+    //构造函数
+    var fn3 = new Function("a", "b", "c", "console.log(a,b,c)");
+    fn3(1, 2, 3);
+    // var fn4 = new Function("a,b,c", "console.log(a,b,c)");
+  </script>
+</body>
+
+</html>

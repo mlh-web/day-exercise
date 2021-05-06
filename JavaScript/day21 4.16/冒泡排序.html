@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* var arr = [12, 3, 234, 123, 453, 878, 2, 241, 456, 496];
+    for (var i = 0; i < arr.length; i++) {
+      //找一个当前数组最大值，并放在数组的末尾
+      for (var j = 0; j < arr.length - i; j++) {
+        if (arr[j] > arr[j + 1]) {
+          //交换位置
+          var temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+
+        }
+      }
+      console.log(arr);
+    }
+    console.log(arr); */
+
+    var num = [];
+    for (var i = 2; i <= 100; i++) {
+      num.push(i)
+      for (var j = 2; j < i; j++) {
+        if (i % j === 0) {
+          num.pop(i);
+         break;
+        }
+        
+      }
+    }
+    console.log(num)
+
+  </script>
+</body>
+
+</html>

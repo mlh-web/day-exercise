@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .display {
+        width: 1130px;
+        height: 286px;
+        margin: 0 auto;
+        border: 1px solid red;
+        overflow: hidden;
+        position: relative;
+      }
+      .display ul {
+        width: 5650px;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+      }
+      .display ul li {
+        float: left;
+      }
+      .display ul li a {
+        display: block;
+        font-size: 0px;
+      }
+      .display ul li img {
+        width: 1130px;
+        height:286px;
+      }
+      .left-arrow,.right-arrow {
+        width: 42px;
+        height: 70px;
+        position: absolute;
+        top: 50%;
+        margin-top: -35px;
+        background-image: url('img/icon-slides.png');
+        background-repeat: no-repeat;
+      }
+      .left-arrow {
+        left: 0px;
+        background-position: -84px 0px;
+        border: 1px solid red;
+      }
+      .right-arrow {
+        right: 0px;
+        background-position: -126px 0px;
+      }
+      .display:hover .left-arrow {
+        background-position:0 0;
+      }
+      .display:hover .right-arrow {
+        background-position: -42px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="display">
+      <ul>
+        <li>
+          <a href="#">  
+          <img src="img/0121365f23ed70a80120a82197289b.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="img/012f595f23ab03a80120a8218c8e64.png"/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="img/0148a25f23aaf6a801215aa038b8a3.png"/>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="img/0149115f23ab31a80120a8212535f0.png"/>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+          <img src="img/015e9c5f23ab15a801215aa0795d4e.png"/>
+        </a>
+        </li>
+      </ul>
+      <div class="left-arrow">
+      </div>
+      <div class="right-arrow">
+      </div>
+      <div class="page">
+      </div>
+    </div>
+  </body>
+</html>

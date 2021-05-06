@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    slice:字符串截取
+      1.参数1：开始位置
+      2.参数2：结束位置（不包含），可以为负数，如果忽略该参数，则默认到末尾
+    substr：根据长度来截取字符串
+      1.参数1：开始位置
+      2.参数2：截取长度，如果忽略该参数，则默认到末尾
+      3.ECMA不再推荐使用
+    substring：字符串截取
+      1.参数1：开始位置
+      2.参数2：结束位置（不包含），可以为负数，如果忽略该参数，则默认到末尾
+    */
+    var str = "123456789";
+    // var re = str.slice(2, 5);//345
+    //var re=str.slice(2,-1);//345678
+    var re=str.slice(3);//456789
+    console.log(re);
+
+    var str2="abcdefg";
+    //var re2=str2.substr(2,4);//cdef
+    var re2=str2.substr(2);//cdefg
+    console.log(re2);
+
+
+  var str3="abc123456"
+  //var re3=str3.substring(2,5);//c12
+  //var re3=str3.substring(2);//c123456
+  var re3=str3.substring(2,-2);//ab,尽量不要写负数
+  console.log(re3)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      /* text-transform 属性控制文本的大小写。 */
+
+      
+      /* text-transform: capitalize; */       /* 文本中的每个单词首字母大写 */
+      /* text-transform: uppercase; */        /* 全大写 */
+      text-transform: lowercase;              /* 全小写 */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">heLlo wOrld, todAy iS goOd Day</div>
+  <script>
+    /* 
+    大小写转换：
+      1.toLowerCase：所有字符串转小写
+      2.toUpperCase：所有字符串转大写
+    */
+    var str = "abCDefGhIJklmn"
+    // var re = str.toLowerCase();
+    var re = str.toUpperCase();
+    console.log(re);
+  </script>
+</body>
+
+</html>

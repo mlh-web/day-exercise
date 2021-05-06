@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* async function fn() {
+      console.log("fn函数执行了");
+      await 123//不等
+      await setTimeout(() => {//不等
+        console.log(222);
+      }, 1000)
+    }
+    fn() */
+
+    /* async function fn() {
+      console.log("333");
+      const re2 = await new Promise((resolve, reject) => {
+        setTimeout(function () {
+          console.log(222);
+          reject("heng")
+        }, 2000)
+      })
+      console.log(111);
+      console.log(re2);
+      return "hello";//返回成功结果值
+    }
+    const re = fn();
+    re.catch((error) => { console.log(error) })//解决await的reject状态报错
+    re.then((data) => { console.log(data) })//data是成功结果 函数返回值 
+    console.log(re);*/
+
+    async function fn() {
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          console.log("aok");
+          resolve();
+        }, 1000)
+      })
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          console.log("bok");
+          resolve();
+        }, 3000)
+      })
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          console.log("cok");
+          resolve();
+        }, 2000)
+      })
+    }
+    fn();
+  </script>
+</body>
+
+</html>

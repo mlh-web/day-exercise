@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      #show {
+        width: 500px;
+        height: 400px;
+        /* border: 1px solid blue; */
+      }
+      #guide {
+        position: relative;
+        width: 500px;
+        height: 100px;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+      }
+      #guide ul {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;  
+      }
+      #guide ul li {
+        float: left;
+        height: 100px;
+        width:100px;
+        margin-top: 15px;
+        text-align: center;
+        /* border: 1px solid green; */
+      }
+      #guide img {
+        width: 90px;
+        height: 70px;
+      }
+      #guide .base-map {
+        display: none;
+        position: absolute;
+        bottom: 100px;
+        left: 0px;
+      }
+      #guide .base-map img {
+        width: 500px;
+        height: 400px;
+      }
+      #guide li:hover .base-map {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="show"> 
+    </div>
+    <div id="guide">
+      <ul>
+        <li>
+          <a href="#">
+          <img src="img/kof-01.jpg">
+          </a>
+          <div class="base-map">
+            <img src="img/kof-01.jpg"/>
+          </div>  
+        </li>
+        <li>
+          <a href="#"> 
+          <img src="img/kof-02.jpg"> 
+          </a>
+          <div class="base-map">
+            <img src="img/kof-02.jpg"/>
+          </div> 
+        </li>
+        <li>
+          <a href="#">
+          <img src="img/kof-03.jpg">
+          </a>
+          <div class="base-map">
+            <img src="img/kof-03.jpg"/>
+          </div>  
+        </li>
+        <li>
+          <a href="#">
+          <img src="img/kof-04.jpg">
+          </a> 
+          <div class="base-map">
+            <img src="img/kof-04.jpg"/>
+          </div> 
+        </li>
+        <li>
+          <a href="#">
+          <img src="img/kof-05.jpg">
+          </a> 
+          <div class="base-map">
+            <img src="img/kof-05.jpg"/>
+          </div> 
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

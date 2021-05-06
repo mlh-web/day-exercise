@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function to2B(num, par) {
+      var n = 0;
+      //定义一个空数组，保存余数
+      var arr = [];
+      //定义一个空字符串，为最终结果
+      var str = '';
+      var strArr = '0123456789abcdefghijklmnopqrstuvwxyz'
+      //首先判断num是否大于0
+      while (num > 0) {
+        n = num % par;
+        arr.push(n);
+        num = parseInt(num / par)
+      }
+      console.log(arr)
+      while (arr.length > 0) {
+        str += strArr[arr.pop()]
+      }
+      return str;
+    }
+    var re = to2B(1000000, 36);
+    console.log(re);
+  </script>
+</body>
+
+</html>

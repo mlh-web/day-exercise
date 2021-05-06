@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function to0b(num, par) {
+      // 每次把num除以2，把得到的值取整，如果值为0了，则说明计算完毕了
+      var n = 0;
+      //定义一个空字符串，用来将数组里的值转为字符串形式输出
+      var str = "";
+      var strArr = "0123456789abcdefghijklmnopqrstuvwsyz"
+      //定义一个数组，用来存放余数
+      var arr = [];
+
+      while (num > 0) {
+        n = num % par;//每次拿num的值对par的值取余，得到余数，并且把余数按顺序保存起来
+        arr.push(n);//将余数用数组保存起来，每次都放在数组的最后一位
+        num = parseInt(num / par);//num除par的值取整后在继续循环
+      }
+
+      console.log(arr);
+
+      //只要数组还有值，则继续删除，拼接
+      while (arr.length > 0) {
+        str += strArr[arr.pop()];
+      }
+      return str;
+    }
+    var re = to0b(255, 16);
+    console.log(re);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [56, 213, 3, 5, 4, 3, 234, 23, 43]
+    function quickArr(arr) {
+      if (arr.length <= 1) {
+        return arr;
+      }
+      var arrLeft = [];
+      var arrRight = [];
+      var center = arr.pop();
+      arr.forEach(function (item, index) {
+        if (item < center) {
+          arrLeft.push(item)
+        }
+        if (item >= center) {
+          arrRight.push(item)
+        }
+      })
+      // console.log(arrLeft.concat(center, arrRight))
+      var newArr = quickArr(arrLeft).concat(center, quickArr(arrRight));
+      return newArr;
+    }
+    var re = quickArr(arr);
+    console.log(re);
+  </script>
+</body>
+
+</html>

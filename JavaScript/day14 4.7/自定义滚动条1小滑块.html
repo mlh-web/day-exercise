@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      overflow: hidden;
+      margin: 0;
+    }
+
+    #bar {
+      position: fixed;
+      height: 100%;
+      right: 0;
+      top: 0;
+      width: 20px;
+      background-color: aqua;
+    }
+
+    #box {
+      position: absolute;
+      width: 100%;
+      height: 60px;
+      background-color: steelblue;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="con"></div>
+  <div id="bar">
+    <div id="box"></div>
+  </div>
+  <script>
+    //生成内容
+    var oCon = document.getElementById("con");
+    for (var i = 0; i < 1000; i++) {
+      oCon.innerHTML += i + '<br>';
+    }
+
+    //基础滑块的拖拽
+    var oBox = document.getElementById("box");
+    var oBar = document.getElementById("bar");
+    oBox.onmousedown = function (e) {
+      //阻止默认事件
+      e.preventDefault();
+      //offsetX:  获取事件发生位置 到 精确的目标元素边缘的距离
+      var mouseToBox = e.offsetY;
+      document.onmousemove = function (e) {
+        e.preventDefault();
+        //clientX:  获取事件发生位置 到 视口的 距离
+        var boxLocation = e.clientY - mouseToBox;
+        //判断临界值
+        /* if (boxLocation <= 0) {
+          boxLocation = 0;
+        } else if (boxLocation >= oBar.clientHeight - oBox.offsetHeight) {
+          boxLocation = oBar.clientHeight - oBox.offsetHeight;
+        } */
+        oBox.style.top = boxLocation + "px";
+      }
+      document.onmouseup = function () {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+  </script>
+</body>
+
+</html>

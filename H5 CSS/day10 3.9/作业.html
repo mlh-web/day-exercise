@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #guide {
+        width: 500px;
+        height: 100px;
+        border: 1px solid red;
+      }
+      #guide ul {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;  
+      }
+      #guide ul li {
+        float: left;
+        height: 100px;
+        width:100px;
+        margin-top: 15px;
+        /* border: 1px solid green; */
+      }
+      #guide img {
+        width: 90px;
+        height: 70px;
+      }
+      #show {
+        width: 500px;
+        height: 400px;
+        position: absolute;
+        z-index: auto;
+        border: 1px solid blue;
+      }
+      #show img {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="show">
+      <a name="img1">
+      <div class="base-map">
+        <img src="img/kof-01.jpg"/>
+      </div>
+      </a>
+      <a name="img2">
+      <div class="base-map">
+        <img src="img/kof-02.jpg"/>
+      </div>
+      </a>
+      <a name="img3">
+      <div class="base-map">
+        <img src="img/kof-03.jpg"/>
+      </div>
+      </a>
+      <a name="img4">
+      <div class="base-map">
+        <img src="img/kof-04.jpg"/>
+      </div>
+      </a>
+      <a name="img5">
+      <div class="base-map">
+        <img src="img/kof-05.jpg"/>
+      </div>
+      </a>
+    </div>
+    <div id="guide">
+      <ul>
+        <li>
+          <a href="#img1">
+            <img src="img/kof-01.jpg" >
+          </a>
+        </li>
+        <li>
+          <a href="#img2"> 
+            <img src="img/kof-02.jpg"> 
+          </a>  
+        </li>
+        <li>
+          <a href="#img3">
+            <img src="img/kof-03.jpg">
+          </a> 
+        </li>
+        <li>
+          <a href="#img4">
+            <img src="img/kof-04.jpg">
+          </a> 
+        </li>
+        <li>
+          <a href="#img5">
+            <img src="img/kof-05.jpg">
+          </a>    
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

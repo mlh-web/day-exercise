@@ -1,0 +1,656 @@
+.top-banner {
+  width: 100%;
+  /* logo和搜素框样式 */
+}
+.top-banner .top-navigation {
+  width: 100%;
+  background-color: #EAEAEA;
+}
+.top-banner .top-navigation .top {
+  width: 1200px;
+  height: 30px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+.top-banner .top-navigation .top .top-left {
+  width: 50%;
+  float: left;
+  line-height: 30px;
+}
+.top-banner .top-navigation .top .top-left strong {
+  font-weight: normal;
+}
+.top-banner .top-navigation .top .top-left a {
+  color: #666;
+  padding: 5px;
+}
+.top-banner .top-navigation .top .top-left a:hover {
+  color: #90EE90;
+}
+.top-banner .top-navigation .top .top-left a + a {
+  border-left: 1px solid #B3AEAE;
+}
+.top-banner .top-navigation .top .top-right {
+  width: 50%;
+  float: right;
+  line-height: 30px;
+}
+.top-banner .top-navigation .top .top-right a {
+  color: #666;
+  padding: 5px;
+}
+.top-banner .top-navigation .top .top-right a:hover {
+  color: #90EE90;
+}
+.top-banner .top-navigation .top .top-right a + a {
+  border-left: 1px solid #B3AEAE;
+}
+.top-banner .top-title {
+  width: 100%;
+}
+.top-banner .top-title .title {
+  width: 1200px;
+  height: 110px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.top-banner .top-title .title .title-left {
+  width: 45%;
+  height: 110px;
+  line-height: 110px;
+  float: left;
+}
+.top-banner .top-title .title .title-left img {
+  width: 175px;
+  height: 56px;
+  margin: 25px 45px;
+  vertical-align: middle;
+}
+.top-banner .top-title .title .title-right {
+  width: 55%;
+  height: 110px;
+  float: right;
+  line-height: 110px;
+  text-align: center;
+  font-size: 0;
+}
+.top-banner .top-title .title .title-right input {
+  width: 490px;
+  height: 30px;
+  border: 2px solid #EA4A36;
+  padding: 0;
+  outline: none;
+  vertical-align: middle;
+}
+.top-banner .top-title .title .title-right button {
+  width: 70px;
+  height: 34px;
+  color: #fff;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #EA4A36;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.goods-banner {
+  width: 100%;
+}
+.goods-banner .goods-navigation {
+  width: 100%;
+  border-bottom: 2px solid #E1251B;
+}
+.goods-banner .goods-navigation .goods {
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.goods-banner .goods-navigation .goods ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+  line-height: 50px;
+}
+.goods-banner .goods-navigation .goods ul li:first-child {
+  width: 210px;
+  height: 50px;
+  color: #fff;
+  background-color: #E1251B;
+}
+.goods-banner .goods-navigation .goods ul li {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 25px;
+  text-align: center;
+}
+.goods-banner .goods-navigation .goods ul li a:hover {
+  color: #90EE90;
+}
+.type-banner {
+  width: 100%;
+}
+.type-banner .type {
+  width: 1200px;
+  height: 55px;
+  margin: 0 auto;
+}
+.type-banner .type ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.type-banner .type ul li {
+  float: left;
+  line-height: 55px;
+  font-size: 12px;
+  color: #7F6697;
+  padding: 0 5px;
+}
+.details-banner {
+  width: 100%;
+}
+.details-banner .details {
+  width: 1200px;
+  height: 530px;
+  margin: 0 auto;
+}
+.details-banner .details .details-left {
+  width: 400px;
+  height: 530px;
+  float: left;
+  position: relative;
+}
+.details-banner .details .details-left .preview {
+  width: 400px;
+  border: 1px solid #333;
+  position: relative;
+}
+.details-banner .details .details-left .preview .show {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+.details-banner .details .details-left .preview .show img {
+  width: 400px;
+  height: 400px;
+}
+.details-banner .details .details-left .preview .show .mask {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(24, 255, 255, 0.5);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.details-banner .details .details-left .preview .bigShow {
+  width: 400px;
+  height: 400px;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 420px;
+  z-index: 2;
+  border: 1px solid #ccc;
+}
+.details-banner .details .details-left .preview .bigShow img {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.details-banner .details .details-left .slideshow {
+  height: 65px;
+  width: 400px;
+  margin: 5px 0 0 0;
+  display: flex;
+}
+.details-banner .details .details-left .slideshow .left,
+.details-banner .details .details-left .slideshow .right {
+  width: 10px;
+  height: 63px;
+  line-height: 63px;
+  background-color: #EBEBEB;
+  border: 1px solid #ccc;
+}
+.details-banner .details .details-left .slideshow .cabinetOut {
+  width: 376px;
+  height: 63px;
+  overflow: hidden;
+}
+.details-banner .details .details-left .slideshow .cabinetOut .cabinet {
+  width: 5000px;
+  display: flex;
+  transition: all 0.8s;
+}
+.details-banner .details .details-left .slideshow .cabinetOut .cabinet li {
+  padding: 2px;
+  margin: 5px 0 0 0;
+}
+.details-banner .details .details-left .slideshow .cabinetOut .cabinet li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+}
+.details-banner .details .details-right {
+  width: 700px;
+  height: 530px;
+  float: left;
+  padding-left: 100px;
+}
+.details-banner .details .details-right .priceArea h5 {
+  margin: 20px 0;
+}
+.details-banner .details .details-right .priceArea .discounts {
+  color: #E12228;
+  margin: 0 0 12px 0;
+}
+.details-banner .details .details-right .priceArea .priceDetail {
+  background-color: #FEE9EC;
+  margin-top: 10px;
+  line-height: 28px;
+  padding: 7px;
+}
+.details-banner .details .details-right .priceArea .priceDetail .price span:nth-child(1) {
+  margin-right: 12px;
+}
+.details-banner .details .details-right .priceArea .priceDetail .price span:nth-child(2) {
+  color: #cc1122;
+}
+.details-banner .details .details-right .priceArea .priceDetail .price span:nth-child(2) span {
+  font-size: 24px;
+}
+.details-banner .details .details-right .priceArea .priceDetail .promotion {
+  display: flex;
+  width: 580px;
+}
+.details-banner .details .details-right .priceArea .priceDetail .promotion p:nth-child(1) {
+  margin-right: 10px;
+}
+.details-banner .details .details-right .priceArea .priceDetail .promotion p:nth-child(2) span {
+  background-color: #c81623;
+  padding: 3px;
+  color: #fff;
+}
+.details-banner .details .details-right .priceArea .sustain {
+  padding: 5px 0;
+}
+.details-banner .details .details-right .priceArea .sustain span:nth-child(1) {
+  margin-right: 12px;
+}
+.details-banner .details .details-right .priceArea .distribution {
+  padding: 5px 0;
+  border-bottom: 1px solid #EDEDED;
+}
+.details-banner .details .details-right .priceArea .distribution span:nth-child(1) {
+  margin-right: 12px;
+}
+.details-banner .details .details-right .goodsChoose {
+  margin: 10px 0;
+  display: flex;
+}
+.details-banner .details .details-right .goodsChoose mark {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  display: block;
+  margin: 0 10px;
+}
+.details-banner .details .details-right .goodsChoose mark a {
+  margin-left: 10px;
+  color: red;
+  cursor: pointer;
+}
+.details-banner .details .details-right .deploy {
+  margin-top: 10px;
+  line-height: 30px;
+}
+.details-banner .details .details-right .deploy dl {
+  margin-bottom: 13px;
+  display: flex;
+}
+.details-banner .details .details-right .deploy dl dt {
+  margin-right: 15px;
+}
+.details-banner .details .details-right .deploy dl dd {
+  padding: 2px 14px;
+  margin-right: 5px;
+  color: #666;
+  line-height: 24px;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.details-banner .details .details-right .deploy dl dd:nth-of-type(1) {
+  color: red;
+}
+.details-banner .details .details-right .goodscount {
+  display: flex;
+}
+.details-banner .details .details-right .goodscount .count {
+  width: 60px;
+  position: relative;
+}
+.details-banner .details .details-right .goodscount .count input {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+}
+.details-banner .details .details-right .goodscount .count .plus {
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline: none;
+  border: 1px solid #ddd;
+}
+.details-banner .details .details-right .goodscount .count .minus {
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  outline: none;
+  border: 1px solid #ddd;
+}
+.details-banner .details .details-right .goodscount .addCart {
+  height: 35px;
+  margin-left: 40px;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #E1251B;
+  border: 1px solid #E1251B;
+}
+.productDetial {
+  width: 1200px;
+  margin: 30px auto 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.productDetial .aside {
+  width: 210px;
+  border: 1px solid #ccc;
+}
+.productDetial .aside .tabTitle {
+  display: flex;
+}
+.productDetial .aside .tabTitle h4 {
+  width: 50%;
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+  border-top: 4px solid #fff;
+  border-bottom: 1px solid #ccc;
+}
+.productDetial .aside .tabTitle h4.active {
+  border-top: 4px solid #e1251b;
+  border-bottom: none;
+}
+.productDetial .aside .tabContent {
+  padding: 10px;
+}
+.productDetial .aside .tabContent .tab-pane {
+  display: none;
+}
+.productDetial .aside .tabContent .tab-pane.active {
+  display: block;
+}
+.productDetial .aside .tabContent .tab-pane:nth-child(1) .partList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.productDetial .aside .tabContent .tab-pane:nth-child(1) .partList li {
+  width: 50%;
+  height: 28px;
+  border-bottom: 1px dashed #ccc;
+  line-height: 28px;
+}
+.productDetial .aside .tabContent .tab-pane:nth-child(1) .goodList li .detailImg {
+  text-align: center;
+}
+.productDetial .aside .tabContent .tab-pane:nth-child(1) .goodList li p {
+  font-size: 18px;
+  color: #ea4a36;
+}
+.productDetial .aside .tabContent .tab-pane:nth-child(1) .goodList li .addCart {
+  text-align: center;
+}
+.productDetial .aside .tabContent .tab-pane:nth-child(1) .goodList li .addCart a {
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  color: #666;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 30px;
+}
+.productDetial .detail {
+  width: 980px;
+}
+.productDetial .detail .fitting {
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+.productDetial .detail .fitting .kt {
+  border-bottom: 1px solid #ddd;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 5px 0 5px 15px;
+}
+.productDetial .detail .fitting .good-suits {
+  height: 170px;
+  padding-top: 10px;
+}
+.productDetial .detail .fitting .good-suits .master {
+  width: 127px;
+  height: 165px;
+  text-align: center;
+  position: relative;
+  float: left;
+}
+.productDetial .detail .fitting .good-suits .master img {
+  width: 87px;
+}
+.productDetial .detail .fitting .good-suits .master p {
+  color: #c81623;
+  font-size: 16px;
+  font-weight: bold;
+}
+.productDetial .detail .fitting .good-suits .master i {
+  position: absolute;
+  top: 48px;
+  right: -25px;
+  font-size: 16px;
+}
+.productDetial .detail .fitting .good-suits .suits {
+  width: 668px;
+  height: 165px;
+  float: left;
+}
+.productDetial .detail .fitting .good-suits .suits .suitsItem {
+  float: left;
+  width: 127px;
+  padding: 0 20px;
+  text-align: center;
+}
+.productDetial .detail .fitting .good-suits .suits .suitsItem img {
+  width: 120px;
+  height: 130px;
+}
+.productDetial .detail .fitting .good-suits .suits .suitsItem p {
+  font-size: 12px;
+}
+.productDetial .detail .fitting .good-suits .suits .suitsItem label {
+  display: block;
+}
+.productDetial .detail .fitting .good-suits .suits .suitsItem label input {
+  vertical-align: middle;
+}
+.productDetial .detail .fitting .good-suits .suits .suitsItem label span {
+  vertical-align: middle;
+}
+.productDetial .detail .fitting .good-suits .result {
+  width: 153px;
+  height: 165px;
+  border-left: 1px solid #ddd;
+  margin-left: 10px;
+  padding-left: 10px;
+  float: left;
+}
+.productDetial .detail .fitting .good-suits .result .num {
+  margin: 10px 0;
+}
+.productDetial .detail .fitting .good-suits .result .price-tit {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.productDetial .detail .fitting .good-suits .result .price {
+  color: #B1191A;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.productDetial .detail .fitting .good-suits .result .addShopcar {
+  padding: 10px 25px;
+  background-color: #e1251b;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+}
+.productDetial .detail .intro .tab-wraped {
+  background-color: #ededed;
+  overflow: hidden;
+}
+.productDetial .detail .intro .tab-wraped li {
+  float: left;
+}
+.productDetial .detail .intro .tab-wraped li + li > a {
+  border-left: 1px solid #ddd;
+}
+.productDetial .detail .intro .tab-wraped li.active a {
+  background-color: #ea4a36;
+  color: #fff;
+}
+.productDetial .detail .intro .tab-wraped li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 11px;
+  text-align: center;
+  color: #666;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.productDetial .detail .intro .tab-content .tab-pane {
+  display: none;
+}
+.productDetial .detail .intro .tab-content .tab-pane.active {
+  display: block;
+}
+.productDetial .detail .intro .tab-content #one .goods-intro {
+  padding-left: 10px;
+}
+.productDetial .detail .intro .tab-content #one .goods-intro li {
+  margin: 10px 0;
+}
+.productDetial .detail .intro .tab-content #one .intro-detail img {
+  width: 100%;
+}
+.toolBar {
+  height: 100%;
+  width: 300px;
+  background-color: #7a6e6e;
+  position: fixed;
+  top: 0;
+  right: -294px;
+  transition: all 0.5s linear;
+}
+.toolBar .content {
+  width: 294px;
+  height: 100%;
+  position: relative;
+  right: -6px;
+  background-color: bisque;
+  z-index: 5;
+}
+.toolBar .menu {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -29px;
+  top: 0px;
+  background: #7a6e6e url(../images/list.png) center no-repeat;
+  background-size: contain;
+}
+.toolBar .navList {
+  width: 35px;
+  position: absolute;
+  z-index: 2;
+  left: -29px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.toolBar .navList li {
+  width: 35px;
+  height: 35px;
+  margin: 3px 0px;
+  position: relative;
+}
+.toolBar .navList li:hover p {
+  left: -62px;
+}
+.toolBar .navList li i {
+  display: block;
+  width: 35px;
+  height: 35px;
+  z-index: 3;
+  position: relative;
+}
+.toolBar .navList li p {
+  width: 62px;
+  height: 35px;
+  left: 35px;
+  top: 0;
+  position: absolute;
+  background-color: red;
+  line-height: 35px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s linear 0.2s;
+  z-index: 1;
+}
+.toolBar .navList li:nth-child(1) i {
+  background: #7a6e6e url(../images/toolbars.png) -87px -174px no-repeat;
+}
+.toolBar .navList li:nth-child(2) i {
+  background: #7a6e6e url(../images/toolbars.png) -50px 0 no-repeat;
+}
+.toolBar .navList li:nth-child(3) i {
+  background: #7a6e6e url(../images/toolbars.png) -50px -100px no-repeat;
+}
+.toolBar .navList li:nth-child(4) i {
+  background: #7a6e6e url(../images/toolbars.png) -190px -150px no-repeat;
+}
+.toolBar .navList li:nth-child(5) i {
+  background: #7a6e6e url(../images/toolbars.png) -50px -150px no-repeat;
+}
+.toolBar .navList li:nth-child(6) i {
+  background: #7a6e6e url(../images/toolbars.png) -50px -250px no-repeat;
+}
+.toolBar .back {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -29px;
+  bottom: 0px;
+  background: #7a6e6e url(../images/toolbars.png) -50px -250px no-repeat;
+  background-size: contain;
+}

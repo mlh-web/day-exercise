@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* let [a, b, ...rest] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    console.log(a,b,rest) */
+
+    //多维数组只要解构关系一一对应也可以进行赋值
+    /* let [a, [b, c, d], e] = [1, [2, 3, 4], 5]
+    console.log(a, b, c, d, e) */
+
+    //练习
+    /* let a = 1;
+    let b = 2;
+    [b, a] = [a, b]
+    console.log(a, b)//2 1 */
+
+    /* let [foo = hoo, hoo = 2] = []
+    console.log(foo, hoo)//Cannot access 'hoo' before initialization */
+
+    /* let [hoo = 2, foo = hoo] = []
+    console.log(foo, hoo)//2 2 */
+
+    //对象的解构赋值
+    /* let { foo, hoo } = { foo:"hello", hoo:"word" }
+    console.log(foo, hoo);//hello word */
+
+    /* let a = 1, b = 2;
+    console.log({ a: a, b: b });
+    console.log({ a, b }); */
+
+    /* let { foo: c, hoo: d } = { foo: 1, hoo: 2 };
+    console.log(foo, hoo);//foo is not defined
+    console.log(c, d);//1 2 */
+
+    //对象没有解构赋值可以设置默认值
+    /* let { x, y = 10 } = { x: 5 }
+    console.log(x, y);//5 10 */
+
+    //对象和数组解构可以嵌套
+    /* let obj = { a: 1, b: [2, 3, 4] }
+    let { a, b: [b1, b2, b3] } = obj
+    console.log(a, b1, b2, b3); */
+
+    //练习
+    //如果想要获取数组的第一个和最后一个值怎么办(使用解构赋值)
+    /* let arr = [1, 2, 3];
+    let { 0: first, [arr.length - 1]: last } = arr;
+    console.log(first, last); */
+
+    //获取log方法
+    /* let { log } = console;
+    log(1); */
+
+    //解构赋值的应用
+    /* function fn() {
+      return [1, 2, 3, 4];
+    }
+    let [a, b, c, d] = fn();
+    console.log(a, b, c, d); */
+
+    /* function fn() {
+      return { foo: "hello" }
+    }
+    let { foo } = fn();
+    console.log(foo); */
+
+    //函数传参数
+    /* function fn1([x, y, z]) {
+      console.log(x, y, z);
+    }
+    fn1([1, 2, 3]) */
+
+    /*  function fn2({ x, y, z }) {
+       console.log(x, y, z);
+     }
+     fn2({ y: 2, x: 1, z: 3 }) */
+    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    方法一：
+      字面量书写
+      最明显的缺点：代码冗余
+    */
+    /* var student1 = {};
+    student1.name = "张三";
+    student1.age = 18;
+    student1.sex = "nan";
+    student1.study = function () {
+      console.log("js")
+    }
+    student1.eat = function () {
+      console.log("fan")
+    }
+    var student2 = {};
+    student2.name = "李四";
+    student2.age = 20;
+    student2.sex = "nv";
+    student2.study = function () {
+      console.log("js");
+    }
+    student2.eat = function () {
+      console.log("fan")
+    } */
+
+
+    /* 
+    方法二：
+      工厂模式
+      对于对象来说，无法得知这个对象是由谁构造的
+    */
+
+    /* function studentCreate(name, age, sex) {
+      var student = {};
+      student.name = name;
+      student.age = age;
+      student.sex = sex;
+      student.study = function () {
+        console.log("js");
+      }
+      student.eat = function () {
+        console.log("fan");
+      }
+      return student;
+    }
+    var student1 = studentCreate("张三", 18, "男");
+    var student2 = studentCreate("李四", 20, "女");
+    console.log(student1.constructor); */
+
+    /* 
+    方法三：
+      1.构造函数要求首字母大写
+      2.当函数被new实例化调用，这个函数才能被称作构造函数
+      3.如果构造函数被new实例化调用，则构造函数会返回实例化对象
+      4.构造函数的this指向其实例化对象
+      
+      优点：
+      1.直接返回一个实例化对象
+      2.可以得到构造器是谁
+      缺点：
+      方法不可共用
+    */
+    /* function Student(name, age, sex) {
+      this.name = name;
+      this.age = age;
+      this.sex = sex;
+      this.study = function () {
+        console.log("js")
+      }
+      this.eat = function () {
+        console.log("fan")
+      }
+    }
+    var s1 = new Student("张三", 18, "男");
+    var s2 = new Student("李四", 20, "女");
+    console.log(s1);
+    console.log(s2);
+    console.log(s1.constructor === Student);
+    console.log([1].sort === [1, 2].sort);
+    console.log(s1.study === s2.study); */
+
+
+    /* 
+    方法四：构造函数+原型方法
+    */
+    function Student(name, age, sex) {
+      this.name = name;
+      this.age = age;
+      this.sex = sex;
+    }
+    Student.prototype.study = function () {
+      console.log("js");
+    }
+    Student.prototype.eat = function () {
+      console.log("fan");
+    }
+    var s1 = new Student("张三", 18, "男");
+    var s2 = new Student("李四", 20, "女");
+    console.log(s1);
+    console.log(s1.constructor);
+    console.log(s1.study === s2.study);
+  </script>
+</body>
+
+</html>

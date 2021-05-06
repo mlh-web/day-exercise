@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- null类型只有一个值： null；
+  是一个空对象指针，typeof检测得到的是object；
+
+  常见的null环境
+  1.作为函数的参数，表示该函数的参数不是对象
+  2.作为原型链的终点
+  3.当需要声明一个变量，但暂时不需要赋值的时候，可以给当前变量赋值为null
+  4.当设置一个值是一个垃圾对象的时候，把变量赋值为null
+-->
+
+
+  
+  <script>
+    //作为函数的参数，表示该函数的参数不是对象
+    function fn(name, age, sex) {
+       console.log(name, age ,sex)
+    }
+    fn("zhangsan",18,null)
+
+    //作为原型链的终点
+    //123---number---object---null
+    //'123'---string---object---null
+
+    //当需要声明一个变量，但暂时不需要赋值的时候，可以给当前变量赋值为null
+     var a = null;
+     function fn1(){
+       a = 2;
+       //此时控制的是全局的a
+     }
+     console.log(a);
+     fn1();
+     console.log(a);
+
+     //当设置一个值是一个垃圾对象的时候，把变量赋值为null
+     var obj = {
+       name: "lisi",
+       sex: "nan"
+     }
+     obj = null;
+     console.log(obj);
+  </script>
+</body>
+</html>

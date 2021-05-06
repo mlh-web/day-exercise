@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [1, 2, 3, 4];
+
+    //手写push
+    function push(arr, a) {
+      arr[arr.length] = a;
+      return arr.length;
+    }
+    var re = push(arr, 5)
+    console.log(arr, re);
+
+    //手写pop
+    function pop(arr) {
+      var a = arr[arr.length - 1];
+      arr.length = arr.length - 1;
+      return a;
+    }
+    var re = pop(arr);
+    console.log(arr, re);
+
+    //peek:返回栈顶元素，不对栈进行修改
+    function peek() {
+      returnarr[arr.length - 1]
+    }
+    var re = peek(arr);
+    console.log(re);
+
+    //isEmpty:判断栈中是否为空，返回布尔值
+    function isEmpty(arr) {
+      /* if (arr.length > 0) {
+        return false;
+      } else {
+        return true;
+      } */
+      // return arr.length > 0 ? false : true
+      return arr.length === 0;
+    }
+    var re = isEmpty(arr)
+    console.log(re);
+
+    //clear:清空整个栈
+    function clear(arr) {
+      arr.length = 0;
+    }
+    clear(arr);
+    console.log(arr);
+  </script>
+</body>
+
+</html>

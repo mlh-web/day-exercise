@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html {
+        height: 100%;
+      }
+      body{
+        margin: 0;
+        height: 0;
+        background-color: #E9E9E9;
+        position: relative;
+      }
+      .size1,.size2,.size3 {
+        position: absolute;
+        background-color: #fff;
+        overflow: hidden;
+        border: 10px solid #fff;
+        transition-property: transform;
+        transition-duration: 1s;
+      }
+      .size1:hover,.size2:hover,.size3:hover {
+        transform: rotate(0deg) scale(1.2,1.2);
+        z-index: 1;
+      }
+      .size1 {
+        width: 200px;
+        height: 300px;
+        background-color: red;
+      }
+      .size2 {
+        width: 300px;
+        height:400px;
+        background-color: blue;
+      }
+      .size3 {
+        width:450px;
+        height: 500px;
+        background-color: yellow;
+      }
+      .location1 {
+        left: 900px;
+        top: 500px;
+      }
+      .location2 {
+        left: 1200px;
+        top: 500px;
+      }
+      .location3 {
+        left: 1300px;
+        top: 150px;
+      }
+      .location4 {
+        left: 400px;
+        top: 350px;
+      }
+      .location5 {
+        left: 600px;
+        top:100px;
+      }
+      .location6 {
+        left: 850px;
+        top: 200px;
+      }
+      .location7 {
+        left: 100px;
+        top: 50px;
+      }
+      .location8 {
+        left: 300px;
+        top: 600px;
+      }
+      .angle1 {
+        transform: rotate(-170deg);
+      }
+      .angle2 {
+        transform: rotate(45deg);
+      }
+      .angle3 {
+        transform: rotate(105deg);
+      }
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="size1 location1 angle2">
+      <img src="img/0955cf751bf74cf7986c9f1d5b2fe26b.jpg">
+    </div>
+    <div class="size2 location2 angle1">
+      <img src="img/33d5549585dd4c9eac5213332b8b9501.jpg">
+    </div>
+    <div class="size3 location3 angle3">
+      <img src="img/3638f61d8a1d4ea0b5e2e3b180353c6a.jpg">
+    </div>
+    <div class="size2 location4">
+      <img src="img/434c3e1b28bb46f89c680981ba5fc8a0.jpg">
+    </div>
+    <div class="size1 location5 angle3">
+      <img src="img/45b48ab655714975ac4c9cc7ae20a064.jpg">
+    </div>
+    <div class="size2 location6 angle2">
+      <img src="img/5a0d5a3521a3402f94fa824d700e1749.jpg">
+    </div>
+    <div class="size3 location7 angle1">
+      <img src="img/7bf5a149998548548e4563e5041e121a.jpg">
+    </div>
+    <div class="size1 location8">
+      <img src="img/9a8f253fcd4944d19c9d9ce82390d1ed.jpg">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="con"></div>
+  <script>
+    var oCon = document.getElementById('con')
+    var duanWu = new Date("2021-6-14 8:00:00");
+    // setIntervalsetInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
+    setInterval(function () {
+      //每次都要获取最新的时间
+      var now = Date.now();
+      //计算时间戳的差值
+      var allTime = duanWu - now;
+      //console.log(allTime)//打印的是时间戳
+      //想要知道时间戳是多少天，我们就要知道一天是多少毫秒
+      var day = Math.floor(allTime / (1000 * 60 * 60 * 24));
+      day = day < 10 ? "0" + day : day;
+      console.log(day);
+      //把总时间戳除一天的毫秒数，取余，得到不满一天的毫秒数，然后计算小时
+      var _day = allTime % (1000 * 60 * 60 * 24);
+      //拿到不满一天的毫秒数，就可以计算剩余小时
+      var hours = Math.floor(_day / (1000 * 60 * 60));
+      var _hours = _day % (1000 * 60 * 60);
+      hours = hours < 10 ? "0" + hours : hours;
+
+      //分钟
+      var minutes = Math.floor(_hours / (1000 * 60))
+      var _minutes = _hours % (1000 * 60);
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+
+      //秒
+      var seconeds = Math.floor(_minutes / 1000);
+      seconeds = seconeds < 10 ? "0" + seconeds : seconeds;
+
+
+      //毫秒
+      var milliSeconeds = _minutes % 1000;
+      if (milliSeconeds < 10) {
+        milliSeconeds = "000" + milliSeconeds
+      } else if (milliSeconeds < 100) {
+        milliSeconeds = "00" + milliSeconeds
+      } else {
+        milliSeconeds = "0" + milliSeconeds
+      }
+    
+      oCon.textContent = "距离端午节还剩" + day + "天" + hours + "小时" + minutes + "分" + seconeds + "秒" + milliSeconeds + "毫秒"
+
+
+
+
+    }, 1)
+  </script>
+</body>
+
+</html>

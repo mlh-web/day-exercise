@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  请输入成绩
+  <input type="text" id="ipt">
+  <button id="btn">提交</button>
+  <p>成绩等级是：</p>
+  <p id="con"></p>
+  <script>
+    var oIpt = document.getElementById("ipt");
+    var oBtn = document.getElementById("btn");
+    var oCon = document.getElementById("con");
+    oBtn.onclick = function () {
+      var userScore = +oIpt.value;
+      if (!(userScore >= 0 && userScore <= 100)) {
+        alert("输入有误，请重新输入")
+        oIpt.value = ""
+        return;
+      }
+      switch (parseInt(userScore / 10)) {
+        case 10:
+        case 9:
+          oCon.textContent = "S";
+          break;
+          case 8:
+          oCon.textContent = "A";
+          break;
+        case 7:
+          oCon.textContent = "B";
+          break;
+        case 6:
+          oCon.textContent = "C";
+          break;
+        default:
+          oCon.textContent = "D";
+      }
+    }
+  </script>
+</body>
+
+</html>

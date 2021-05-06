@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* 
+            1. middle、left、right都float:left
+            2, middle占据100%；
+            3. 将left使用margin-left:-100%拉倒最左边。
+            4. 将right使用margin-left:-200px拉倒最右边。
+            5. left和right都拉回来了，但是会覆盖middle的内容，所以这个使用使用padding-left和padding-right将middle内容显示出来。
+            6.内容拉回来了，但是left和right也跟着过来了。
+            7.left上使用position:relative;left:-200px;
+            8. right上使用position:relative;right:-200px;
+             */
+            html,body{
+                margin:0;
+                height:100%;
+            }
+
+            #content{
+                height:100%;
+                min-width:500px;
+                background-color:pink;
+
+                padding-left:200px;
+                padding-right:200px;
+
+            }
+            #middle{
+                float:left;
+                width:100%;
+                height:100%;
+                background-color:blue;
+            }
+            #left{
+                float:left;
+                width:200px;
+                height:100%;
+                background-color:brown;
+                margin-left:-100%;
+
+                position:relative;
+                left:-200px;
+            }
+
+            #right{
+                float:left;
+                width:200px;
+                height:100%;
+                background-color:yellow;
+                margin-left:-200px;
+
+                position:relative;
+                right:-200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div id="middle">
+                1哈哈哈哈哈哈哈哈哈aha哈哈哈哈涨涨1
+            </div>
+            <div id="left">左</div>
+            <div id="right">右</div>
+        </div>
+    </body>
+</html>

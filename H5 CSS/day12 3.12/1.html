@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <style>
+            body{
+                margin:0;
+                background-color:#333;
+            }
+            ul{
+                margin:50px auto;
+                padding:0;
+                list-style-type:none;
+
+                width:1010px;
+                /* border:1px solid blue; */
+            }
+            ul::after{
+                content:'';
+                display:block;
+                clear:both;
+            }
+            ul li{
+                float:left;
+                
+                font-size:0;
+                margin-left:10px;
+                margin-right: 10px;
+                /* border:1px solid pink; */
+            }
+
+            ul li a{
+                display:block;
+                position:relative;
+            }
+
+            ul li a img{
+                border-radius:5px;
+            }
+
+            /* 在每个li前面加上边框 */
+            ul li a::before{
+                display:none;
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                bottom:0;
+                right:0;
+                border:10px solid rgba(255,255,255,.5);
+                border-radius:5px;
+
+            }
+
+            ul li a:hover::before{
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="./img/x1.jpg" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/x2.jpg" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/x3.jpg" />
+                </a>
+            </li>
+        </ul>
+    </body>
+</htmL>

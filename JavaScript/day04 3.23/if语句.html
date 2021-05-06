@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 单分支语句
+      1.if(判断式){代码块}
+      2.if后的小括号返回的一定是布尔值，当布尔值为true时，执行代码块，否则踢出if语句 */
+
+      // 单分支if：声明变量a、b，且赋值a和b都等于5，当a等于b的时候，重新给b赋值，并弹出b的值
+      /* var a=5;
+          b=5;//(这是声明了b)
+      // var a=b=5;//(这情况是没有声明b直接使用)
+      if(a===b){
+        b="10";
+        alert(b);
+      } */
+
+      /* 双分支：else语句
+            1.if（判断式）{代码块1}else{代码块2}
+            2.如果判断返回true，则执行代码块1，否则执行代码块2 */
+
+      // 双分支if：声明变量a赋值为100，当a大于50时，弹出“a真大”，否则弹出“a真小”
+      /* var a=49;
+      if(a>50){
+        alert("a真大")
+      }else{
+        alert("a真小")
+      } */
+
+       // 双分支：y值和x值相关。X大于等于3时，y值为2。X小于3时，y值为1
+       /* var x=5;
+       if(x>3){
+         y=2;
+       }else{
+         y=1;
+       }
+       console.log(y); */
+
+        // 双分支：如果x大于y成立，则x值为y值加1，否则x值为y值减1
+        /* var x=2,
+        y=3;
+        if(x>y){
+          x=y+1;
+        }else{
+          x=y-1;
+        }
+        console.log(x); */
+
+        //双分支：如果x大于y或者x小于z成立，则x值为z值，否则x值为y值
+        /* var x=3,
+        y=4,
+        z=3;
+        if(x>y||x<z){
+          x=z;
+        }else{
+          x=y;
+        }
+        console.log(x); */
+
+        /* 多分支if
+              if（条件表达式）{语句1;}else if（条件表达式）{语句2;}。。。else{语句3;} */
+        
+        // 多分支:如果x值为3，y值为2，如果x值大于3，y值为1，如果x值小于3，y值为4
+        /* var x=3;
+        if(x<3){
+          y=4;
+        }else if(x>3){
+          y=1;
+        }else{
+          y=2;
+        }
+        console.log(y); */
+        //多分支:x值为2，y值为1，如果x值比2小，y值为0，如果x值比10大，y值为10，如果x值小于4且大于3，y值为5，其他情况y为3
+        var x=20,
+        y=1
+        if(x<2){
+          y=0;
+        }else if(x>10){
+          y=10;
+        }else if(x>=3&&x<=4){
+          y=5;
+        }else{
+          y=3;
+        }
+        console.log(y); 
+  </script>
+</body>
+</html>

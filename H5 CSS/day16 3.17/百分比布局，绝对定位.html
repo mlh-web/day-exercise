@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      html,body {
+        height: 100%;
+        margin: 0;
+      }
+      #centent {
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        position: relative;
+      }
+      #centent .left {
+        width: 300px;
+        height: 100%;
+        background-color: red;
+        position: absolute;
+        z-index: 1;
+      }
+      #centent .right {
+        background-color: yellow;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="centent">
+      <div class="left">zuo</div>
+      <div class="right">right</div>
+    </div>
+  </body> 
+</html>

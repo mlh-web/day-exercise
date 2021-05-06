@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 
+    其他类型转布尔值:
+      1.可以使用Boolean（）方法，把其他类型转换为布尔值
+      
+      2.number转boolean
+          2.1 0为false 非0为true NaN为false
+          
+      3.string转boolean
+          3.1 空为false 非空为true
+
+      4.null和undefined都是false
+
+      5.object类型转Boolean都是true 
+     */
+
+
+    //  number转boolean
+    console.log(Boolean(2))//true
+    console.log(Boolean(2.1))//true
+    console.log(Boolean(-2.1))//true
+    console.log(Boolean(0))//false
+    console.log(Boolean(Infinity))//true
+    console.log(Boolean(NaN))//false
+    console.log('------------------------')
+    // string转boolean
+    console.log(Boolean(""))//false
+    console.log(Boolean(" "))//true
+    console.log(Boolean("\n"))//true
+    console.log(Boolean("0"))//true
+    console.log(Boolean("iuashfiaxvkjnoi"))//true
+    console.log('------------------------')
+    // null和undefined转boolean
+    console.log(Boolean(null))//false
+    console.log(Boolean(undefined))//false
+    console.log('------------------------')
+    // object类型转Boolean
+    console.log(Boolean([]))//true
+    console.log(Boolean([0]))//true
+    console.log(Boolean(1,2))//true
+    console.log(Boolean({}))//true
+    console.log(Boolean(function(){}))//true
+  </script>
+</body>
+</html>

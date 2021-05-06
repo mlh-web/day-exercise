@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .ball {
+      width: 400px;
+      height: 400px;
+      /* border: 1px solid red; */
+      position: relative;
+    }
+    .ball div:first-of-type {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px solid black;
+      box-shadow: -10px -10px 10px black inset;
+      background-color: #fff;
+    }
+
+    .ball div:last-of-type {
+      width: 300px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #ccc;
+      /* box-shadow: 10px 10px 10px #ccc; */
+      position: absolute;
+      bottom: 50px;
+      left: 150px;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="ball">
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

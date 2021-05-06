@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #banner {
+        position: relative;
+        width: 750px;
+        height: 450px;
+        border: 1px solid red;
+        overflow: hidden;
+      }
+
+      #banner ul {
+        margin: 0;
+        padding: 0;
+        width: 3000px;
+        height: 100%;
+        list-style-type: none;
+      }
+      #banner ul li {
+        float: left;
+      }
+
+      #banner ul li img {
+        width: 750px;
+        height: 450px;
+      }
+
+      #banner .left-arrow {
+        position: absolute;
+        top: 50%;
+        margin-top: -35px;
+        width: 42px;
+        height: 70px;
+        left: 0;
+        /* border: 1px solid black; */
+        background-image: url(./img/home/icon-slides.png);
+        background-repeat: no-repeat;
+        background-position: -84px 0px;
+      }
+      
+      #banner .right-arrow {
+        position: absolute;
+        /* border: 1px solid black; */
+        width: 42px;
+        height: 70px;
+        right: 0;
+        top: 50%;
+        margin-top: -35px;
+        background-image: url(./img/home/icon-slides.png);
+        background-repeat: no-repeat;
+        background-position: -126px 0px;
+      }
+
+      #banner:hover .left-arrow {
+        background-position: 0 0;
+      }
+
+      #banner:hover .right-arrow {
+        background-position: -42px 0;
+      }
+      
+      #banner .page {
+        position: absolute;
+        width: 80px;
+        height: 10px;
+        left: 50%;
+        margin-left: -50px;
+        bottom: 25px;
+        /* border: 1px solid black; */
+      }
+
+      .page div {
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: #cc2233;
+        border-radius: 50%;
+        /* border: 1px solid pink; */
+      }
+
+      #banner .page .active {
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="banner">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="img/home/banner1.jpg"/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img//home/banner2.jpg"/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/home/banner3.jpg"/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/home/banner4.jpg"/>
+          </a>
+        </li>
+      </ul>
+    
+    <div class="left-arrow">
+
+    </div>
+    <div class="right-arrow">
+
+    </div>
+    <div class="page">
+      <div class="active"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    </div>
+  </body>
+</html>

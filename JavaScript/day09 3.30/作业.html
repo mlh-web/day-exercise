@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //给定一个字符串如：“abaasdffggghhjjkkgfddsssss3444343”问题如下：
+    // 字符串的长度
+    /* var str="abaasdffggghhjjkkgfddsssss3444343"
+    var extent=str.length
+    console.log(extent);//33 */
+
+
+    //取出指定位置的字符，如：0, 3, 5, 9等
+    /* var str="abaasdffggghhjjkkgfddsssss3444343"
+    console.log(str[0],str[3],str[5],str[9]);//a a d g */
+
+
+    //查找指定字符是否在以上字符串中存在，如：i，c ，b等
+    /* var str="abaasdffggghhjjkkgfddsssss3444343"
+    console.log(str.indexOf("i",0));//-1
+    console.log(str.indexOf("c",0));//-1
+    console.log(str.indexOf("b",0));//1 */
+
+    //替换指定的字符，如：g替换为22, ss替换为b等操作方法
+    /* var str="abaasdffggghhjjkkgfddsssss3444343"
+    var re=str.replace("g",22);
+    var re2=str.replace("ss","b")
+    console.log(re,re2)//abaasdff22gghhjjkkgfddsssss3444343  abaasdffggghhjjkkgfddbsss3444343 */
+
+
+    // 截取指定开始位置到结束位置的字符串，如：取得1 - 5的字符串
+    /* var str="abaasdffggghhjjkkgfddsssss3444343"
+    var re=str.slice(1,6);
+    console.log(re);//baasd */
+
+    //找出以上字符串中出现次数最多的字符和出现的次数
+
+    //遍历字符串，并将遍历出的字符两头添加符号“@”输出至当前的文档页面。
+    /* var str="abaasdffggghhjjkkgfddsssss3444343"
+    var arr=str.split("")
+    arr.push("@");
+    arr.unshift("@")
+    var re=arr.join("");
+    console.log(re); */
+
+    //求10 - 20之间的随机数
+    /* console.log(Math.floor(Math.random()*10+10)) */
+
+    //随机生成颜色RGB
+    function color(){
+      var rgb='rgb('+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+')'
+      return rgb;
+    }
+    var re=color();
+    console.log(re);
+
+    //模拟实现max() / min()
+
+    //写一个函数，格式化日期对象，返回yyyy-MM-dd HHmmss的形式 
+    
+    
+    
+    
+    /* 已知一个url地址http://www.baidu.com?user=laowang&pass=123456&sex=nan;
+    请把查询字符串的内容以对象的形式表示出来
+    得到：{
+          user:"laowang",
+          pass:"123456",
+          sex:"nan"
+        } */
+    var str="http://www.baidu.com?user=laowang&pass=123456&sex=nan;"
+    var index1 = str.indexOf('?')
+    var newStr=str.slice(index1+1,-1);
+    console.log(newStr);
+    var re=newStr.split("&");
+    console.log(re);
+
+
+
+  /* 
+    已知一个查询字符串对象
+      {
+        user:"laowang",
+        pass:"123456",
+        sex:"nan"
+      }
+    已知url地址是http://www.baidu.com;
+    请把url地址和查询字符串组合 形成真正的地址：http://www.baidu.com?user=laowang&pass=123456&sex=nan;
+             
+        */
+  </script>
+</body>
+
+</html>

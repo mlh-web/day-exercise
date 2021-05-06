@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    查询字符串：
+      1.charAt(n):查询下标为n的字符，
+        1.1可以使用字符串给中括号下标的方式替代
+
+      2.indexOf:查询某串字符第一次出现在字符串中的位置，如果没有则返回-1
+
+      3.lastIndexOf:倒序查询，但是下标任然是从左向右
+
+      4.search:和indexOf类似，只不过search查询条件可以是一个正则表达式
+
+      5.match:匹配，一般和正则同时使用，匹配符和条件的字符，组成一个数组
+    */
+    var str1 = "abcdefg";
+    // var re=str1.charAt(3);
+    var re = str1[3]
+    console.log(re);
+
+    var re = str1.indexOf("cd", 6);//-1
+    console.log(re);
+
+    var str1 = "abcd123efg456";
+    var reg1 = /[0-9]/gi;//g：代表可以进行全局匹配。正则默认匹配到就不匹配了 i：代表不区分大小写匹配
+    var re = str1.search(reg1)
+    console.log(re);//4
+
+    var str1 = "abcd123efg456";
+    var reg1=/[0-9]/gi;
+    var re=str1.match(reg1);
+    console.log(re);
+  </script>
+</body>
+
+</html>

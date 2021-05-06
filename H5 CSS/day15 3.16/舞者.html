@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 56px;
+        height: 100px;
+        border: 1px solid red;
+        background-image: url(./dancer.png);
+        background-repeat: no-repeat;
+        animation-name: dancer;
+        animation-duration: 5s;
+        animation-timing-function: steps(22);
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes dancer {
+        0%{
+          background-position: 0px 0px;
+        }
+        100%{
+          background-position: -1229px 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      padding: 10px;
+      border: 5px solid #000;
+      margin: 30px;
+      /* display: none; */
+    }
+
+    .con {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <div class="con">1</div>
+  </div>
+  <script>
+    /*
+    offsetWidth:
+      1.获取元素的高度（content+padding+border）
+      2.当元素隐藏的时候，获取不到offsetWidth
+      3.当图片没有加载完成，并且没有设置width属性的时候，也获取不到
+    */
+    var oBox = document.getElementById("box");
+    console.log(oBox.offsetWidth)//230
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    class Person {
+      constructor(name, age) {
+        this.name = name
+        this.age = age
+      }
+      sayhi() {
+        console.log("你好，我是" + this.name);
+      }
+    }
+    //学生类
+    //使用extends，让Student继承Person
+    class Student extends Person {
+      constructor(name, age, score) {
+        super(name, age)//这个super函数指向的其实就是Person的constructor函数
+        this.score = score
+      }
+    }
+    let p1 = new Person('zs', 18)
+    let s1 = new Student('ls', 20, 100)
+    console.log(p1);
+    console.log(s1);
+    p1.sayhi()
+    s1.sayhi()
+
+  </script>
+</body>
+
+</html>

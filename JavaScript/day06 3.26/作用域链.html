@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    1.作用域链：保证对 当前执行环境有权访问的所有变量和函数 的有序访问
+    2.当函数声明的时候，就已经确定了作用域链，但是因为这个函数没有被调用，所以函数内部的变量对象没有生成，作用域并没有完整
+    3.当函数执行的时候，创建了自己的变量对象，并推到了作用域链的最前端，形成完整的作用域链
+    4.作用域链的最前端一定是自身的执行环境的变量对象，作用域链的末端一定是全局的变量对象
+    5.标识符的解析是沿着作用域链一级一级寻找的过程，如果寻找不到，则会报错
+    */
+    /* var a=1;
+    function fn1(){
+      console.log(a);//1
+    }
+    function fn2(){
+      var a=2;
+      fn1()
+      console.log(a)//2
+    }
+    fn2();
+    */
+
+
+    // 第一题
+    /* var v = "hello";
+        (function () {
+            alert(v);//undefined
+            var v = "world";
+        })();
+        alert(v);//hello */
+
+    //第二题
+    /* (function () {
+        alert(a + b + c);//NaN
+        var a = "1";
+        var f = function () {};
+        var b = "2";
+        var c = "3";
+    })(); */
+
+    //第三题
+    /* (function () {
+        f2();
+        f1(); //f1 is not a function
+        var f1 = function () {
+            alert(2)
+        };
+
+        function f2() {
+            alert(1);//1
+        }
+    })(); */
+
+    //第四题
+    /* var a = 1;
+
+    function outer() {
+        var b = 2;
+
+        function inner() {
+            var c = 4;
+            alert(a);//1
+        }
+        inner();
+    }
+    outer(); */
+
+    //第五题
+    /* var a = 1;
+
+    function check() {
+        a = 100; //修改的是全局的a
+        alert(a);//100
+    }
+    check();
+    alert(a);//100 */
+
+    //第六题
+    /* var v = "hello";
+    if (true) {
+        alert(v);//hello
+        var v = "world";
+    }
+    alert(v);//world */
+
+    //第七题
+    /* function rain() {
+        var x = 1;
+
+        function man() {
+            x = 100;
+        }
+        man();
+        alert(x);//100
+    }
+    rain(); */
+
+    //第八题
+    /* var x = 1;
+
+    function rain() {
+        alert(x);//undefined
+        var x = 'man';
+        alert(x);//'man'
+    }
+    rain()
+*/
+
+    //第九题
+    /* function rain() {
+        //当页面中没有出现声明某个变量，而直接赋值，则这个变量是全局变量
+        x = 100;
+    }
+    rain();
+    alert(x); //100 */
+
+    //第十题
+    /* var t = 'a';
+    function test2() {
+      alert(t);//undefined
+      var t = 'b';
+      alert(t);//'b'
+    }
+    test2(); */
+
+    //第十一题
+    /* var t = 'a';
+    function test2() {
+      alert(t);//a
+      t = 'b';
+      alert(t);//b
+    }
+    alert(t);//a
+    test2();
+    alert(t);//b */
+
+    //第十二题
+    /* var a = "Hello";
+    function test() {
+        alert(a);//"Hello"
+        a = "World";
+        alert(a);//"World"
+    }
+    test(); */
+
+    //第十三题
+    var a = 1;
+    function test() {
+        alert(a);//undefined
+        a = 4;
+        alert(a)//4
+        var a = 2;
+        alert(a);//2
+    }
+    test();
+    alert(a);//1
+  </script>
+</body>
+
+</html>

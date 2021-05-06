@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    删除数组：
+      1.pop()和shift(),删除数组的最后一个值或第一个值，并返回数组被删除的元素
+      2.length属性，只要设置了length属性长度比原数组长度小，则新长度以外的值全部被删除
+      3.delete：delete用来删除对象的某个属性，因为数组也是对象，但是delete只是删除了这个值，位置依然保留，值为undefined
+      4.splice： 删除数组的某些值
+        4.1 参数1：开始删除的下标位置
+        4.2 参数2：要删除数组的长度
+        4.3 返回值：splice改变了原数组，并把删除的元素组成了一个新的数组返回
+     */
+    var arr = [1, 2, 3, 4, 5, 6]
+    var re = arr.pop();
+    console.log(re);//6
+
+    arr.length = 4;
+    console.log(arr);//(4) [1, 2, 3, 4]
+
+    delete arr[1];//把数组下标为1的值删除了
+    console.log(arr);//(4) [1, empty, 3, 4]
+
+    var arr2 = ["a", "b", "c", "d", "e", "f"];
+    var re = arr2.splice(3, 2)
+    console.log(arr2)(4) //["a", "b", "c", "f"]
+    console.log(re)//(2) ["d", "e"]
+  </script>
+</body>
+
+</html>

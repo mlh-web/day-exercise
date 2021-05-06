@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //封装一个函数，打印this
+    //this指向其所在函数的调用者，如果没有则指向window
+    /* function fn1(){
+      console.log(this);//window object window
+    }
+    //this和函数的调用方式有关
+    fn1();//直接调用
+ 
+    //把当前函数写在对象中
+    var obj = {
+      name: "xiaowang",
+      do: fn1,
+      eat: function () {
+        console.log(this);//object
+        fn1(); 
+      }
+    }
+    obj.do(); //有一个上下文对象调用  obj
+    obj.eat(); */
+
+
+    function fn() {
+      console.log(this.a)//'obj'
+    }
+    var a = "hello"
+    var obj = {
+      a: "obj",
+      fn: fn
+    }
+    obj.fn()
+
+    /* function fn() {
+      console.log(this.a)//obj
+    }
+    var a = "hello"
+    var obj = {
+      a: "obj",
+      fn: fn
+    }
+    var objs = {
+      a: "objs",
+      obj: obj
+    }
+    objs.obj.fn() */
+
+    /* function inner() {
+      console.log(this);//window
+    }
+
+    function outer() {
+      inner() 
+    }
+    outer(); */
+
+    /* function fn() {
+      console.log(this.a)//hello
+    }
+    var a = "hello"
+    var obj = {
+      a: "obj",
+      fn: fn
+    }
+    var demo = obj.fn;
+    demo() */
+  </script>
+</body>
+
+</html>

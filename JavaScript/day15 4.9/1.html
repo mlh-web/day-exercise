@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var obj = {
+    //   a: '1',
+    //   b: {
+    //     c: function () {
+    //       console.log(this)
+    
+    //     }
+    //   }
+    // }
+    // console.log(obj.b.c()) //obj 
+      
+
+    function fn1() {
+      console.log(1);
+    }
+    function fn2() {
+      console.log(2)
+    }
+    fn1.call(fn2);//1
+    // console.dir(fn2)
+
+    // fn1.call.call(fn2);//2
+    // var maCall = fn1.call
+    // maCall.call(fn2);//2
+  </script>
+</body>
+
+</html>

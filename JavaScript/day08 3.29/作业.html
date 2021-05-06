@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 将数组的0去掉
+    数组排序去重
+    返回数组的最大最小值
+    求一组数中的所有数的和和平均值
+    求一组数中的最大值和最小值，以及所在位置
+    翻转数组 */
+
+    //第1题：将数组的0去掉
+
+    /* var arr = [1, 2, 3, 0, 4, 5, 0, 6, 0, 7];
+    var re = arr.filter(function (item, index, array) {
+      if (item === 0) {
+        return false;
+      } else {
+        return true;
+      }
+    })
+    console.log(re); */
+
+    /* var arr = [1, 2, 3, 0, 4, 5, 0, 6, 0, 7];
+    var re = arr.filter(function (item, index, array) {
+      return item > 0 || item < 0;
+    })
+    console.log(re); */
+
+    //第2题：数组排序去重
+    /* var arr=[1,2,43,53,64,1,43,88]
+    var newArr=[];
+    for(i=0;i<arr.length;i++){
+      if(newArr.indexOf(arr[i])==-1){
+        newArr.push(arr[i])
+      }
+    }
+    console.log(newArr); */
+
+    //第3题：返回数组的最大最小值
+    /* var arr=[1,23,45,5,67,32,644,234];
+    arr.sort(function(a,b){
+      if(a>=b){
+        return 1;
+      }else{
+        return -1;
+      }
+    })
+    console.log('最小值为'+arr[0],'最大值为'+arr[arr.length-1]); */
+
+   /*  var arr=[1,23,45,5,67,32,644,234];
+    arr.sort(function(a,b){
+      return a-b;
+    })
+    console.log('最小值为'+arr[0],'最大值为'+arr[arr.length-1]); */
+
+    //第4题：求一组数中的所有数的和和平均值
+    /* var arr=[25,3,435,65,7,8,91,98,69,8]
+    var sum=0;
+    arr.forEach(function(item,index,array){  
+      sum=sum+item;
+    })
+    console.log('总和='+sum)
+    console.log('平均值='+sum/arr.length); */
+    
+    //第5题：求一组数中的最大值和最小值，以及所在位置
+    var arr=[25,3,435,65,7,8,91,98,69,8];
+    var newArr=arr;
+    arr.sort(function(a,b){
+      return a-b;
+    })
+    console.log(arr[0],arr[arr.length-1]);
+
+
+    //第6题：翻转数组
+    /* var arr=[1,2,3,4,5,6,7,8,9];
+    var newArr=[];
+    arr.forEach(function(item,index,array){
+      newArr.unshift(item)
+    })
+    console.log(newArr); */
+  </script>
+</body>
+
+</html>

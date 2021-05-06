@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    函数调用：
+      1.直接调用
+      2.方法调用
+    */
+    /* function fn(){
+      alert();
+    }
+    //直接调用
+    fn() */
+
+
+
+    /* var zhangsan = {
+      //这个是属性
+      name: "zhangsan",
+      sex: "nan",
+      //这个是方法
+      do: function () {
+        alert("111");
+        alert("222");
+      }
+    }
+    
+    //对象方法的调用
+    zhangsan.do()
+    //添加属性
+    zhangsan.height = 170 */
+    //添加方法
+    /* zhangsan.eat = function () {
+      console.log("肉");
+    } */
+
+
+
+
+    /* function fn1() {
+      var a = 1;
+      return function () {
+        alert(a);
+      }
+    }
+    fn1()()
+    
+    var b = fn1;
+    console.log(b); */
+
+
+
+    /* function fn1() {
+      var a = 1;
+      return;//返回的是undefined
+      alert(2);
+    }
+
+    console.log(fn1()); */
+
+
+    /* function teacherMessage() {
+      alert("我的名字是" + obj.name);
+      alert("我的年龄是" + obj.age);
+      alert("我的性别是" + obj.sex);
+    }
+    var obj = {
+      name: "zhangsan",
+      age: "20",
+      sex: "nv"
+    }
+    teacherMessage(obj); */
+
+
+    
+    function fn1(a, b) {
+      var sum = a + b;
+      return sum;
+      alert("计算完毕");
+    }
+
+    var a = fn1(1, 2);
+    console.log(a);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var now = new Date;
+    console.log(now);//Tue Mar 30 2021 20:03:07 GMT+0800 (中国标准时间)
+
+    //获取年 getFullYear
+    console.log(now.getFullYear());//2021
+    console.log(now.getYear());//121
+    console.log(typeof now.getFullYear());//number
+
+    //月  getMonth
+    console.log(now.getMonth());//2 三月就是2
+
+    //日 getDate
+    console.log(now.getDate());//30
+
+    //时 getHours
+    console.log(now.getHours());//20
+
+    //分 getMinutes
+    console.log(now.getMinutes());//5
+
+    //秒 getSeconds
+    console.log(now.getSeconds());//52
+
+    //毫秒 getMilliseconds
+    console.log(now.getMilliseconds());//406
+
+    //星期 getDay
+    console.log(now.getDay());//2
+  </script>
+</body>
+
+</html>

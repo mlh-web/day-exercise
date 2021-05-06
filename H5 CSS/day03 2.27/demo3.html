@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="./xxx.php" method="GET">
+        <label for="email">邮箱地址</label>
+        <input type="text" name="mailbox" id="email"/>
+        <br/>
+        <label for="pass">密　　码</label>
+        <input type="passwold" name="passwd" id="pass"/>
+        <br/>
+        <label for="repass">确认密码
+        <input type="password" name="apasswd" id="repass"/>
+        <br/>
+        <lable>上传头像</lable>
+        <input type="file" multiple/>
+        <br/>
+        性　　别
+        <lable>女</lable>
+        <input type="radio" name="sex"/>
+        <lable>男</lable>
+        <input type="radio" name="sex"/>
+        <br/>
+        兴　　趣
+        <lable>登山</lable>
+            <input type="checkbox" name="xingqu[]" value="dengshan"/>
+        <lable>郊游</lable>
+            <input type="checkbox" name="xingqu[]" value="jiaoyou"/>
+        <lable>钓鱼</lable>
+            <input type="checkbox" name="xingqu[]" value="diaoyu"/>
+        <label>养鱼</lable>
+            <input type="checkbox" name="xingqu[]" value="yangyu"/>
+        <lable>饲养宠物</lable>
+            <input type="checkbox" name="xingqu[]" value="siyangchongwu"/>
+        <lable>网络游戏</lable>
+            <input type="checkbox" name="xingqu[]" value="wangluoyouxi"/ >
+        <br/>
+        国　　家
+            <select>
+                <option value="C">中国</option>
+                <option value="A">美国</option>
+                <option value="J">日本</option>
+                <option value="k">韩国</option>
+            </select>
+            <br/>
+        <button type="submit">登录</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    栈操作：
+      push():
+        1.向数组的末尾添加一个或多个元素（多个参数就可以）
+        2.push方法返回改变后数组的长度
+      pop():
+        删除数组的最后一行，并返回删除的元素
+    */
+    var arr = [1, 2, 3, 4, 5];
+    var re=arr.push(6);
+    console.log(re);//6
+    console.log(arr);//(6) [1, 2, 3, 4, 5, 6]
+    arr.push([7,8,9]);
+    console.log(arr);//(7) [1, 2, 3, 4, 5, 6, Array(3)],push插入会把数组直接当成1个值插入
+
+
+    var arr2=["a","b","c","d"]
+    var re=arr2.pop();
+    console.log(re);//"d"
+    console.log(arr2);//(3) ["a", "b", "c"]
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 同时声明多个变量时使用
+    先执行逗号前的语句，在执行逗号后的语句，最后返回最后一个逗号的值 */
+    var a=1;
+    var b,c,d;
+    var e=(1,2,3);
+    var f=(a=4,1,2);
+    console.log(a,e,f)//4,3,2
+
+    for (var g=0,h=0;g<5,h<5;g++,h++) {
+      console.log(123456789);//输出5次
+    }
+    
+  </script>
+</body>
+</html>

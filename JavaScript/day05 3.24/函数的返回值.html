@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 调用函数有两种可能：
+    1.想要做一些操作 
+    2.让函数做一些操作，并返回给我们一个信息 */
+
+
+    //不需要返回值，只需要做一些操作
+    /* function fn(a, b) {
+      var sum = a + b;
+      console.log(sum);
+    }
+    fn(1, 2); */
+    // console.log(fn(1, 2));//undefined(函数没有返回值)
+
+
+    //函数的目的是计算好两个数的和，并且返回回来，将来要用
+    /* function fn(a, b) {
+      var sum = a + b;
+      //return就是专门用来返回函数的返回值的
+      return sum;
+    }
+    var a = fn(1, 1);
+    console.log(a); */
+
+
+    /* return的作用：
+      1.函数返回值
+      2.立即退出函数 */
+    function fn() {
+      console.log(1);
+      console.log(2);
+      return 1;
+      console.log(3);
+    }
+    fn();
+  </script>
+
+</body>
+
+</html>

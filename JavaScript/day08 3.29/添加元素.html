@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    添加元素：
+      1.push和unshift：向数组的后端或前端插入元素，可以同时插入多个元素，返回修改后的数组长度
+      2.使用下标的方式，直接可以给数组添加元素，或者修改数组的某些值
+      3.concat：合并数组，把concat所有的参数添加到数组的尾部，直接返回合并后的新数组
+        3.1 concat可以有多个参数，一起合并
+        3.2 concat的参数可以是数组，把数组展开合并到arr中，只能展开一个维度
+      4.splice:添加数组中任意位置的某些值
+        4.1 参数1：开始删除的位置
+        4.2 参数2：删除的长度
+        4.3 参数3：可以是任意的多个值，是在删除的位置添加的元素
+    */
+    var arr = [1, 2, 3, 4, 5, 6, 7];
+    var re = arr.push(1);
+    console.log(re, arr);
+
+    arr[arr.length] = "a";
+    console.log(arr);
+
+    /* var re=arr.concat(1);
+    console.log(re);//(10) [1, 2, 3, 4, 5, 6, 7, 1, "a", 1] */
+    /* var re=arr.concat(2,3);
+    console.log(re);//(11) [1, 2, 3, 4, 5, 6, 7, 1, "a", 2, 3] */
+    /* var re =arr.concat([1,2]);
+    console.log(re);//(11) [1, 2, 3, 4, 5, 6, 7, 1, "a", 1, 2] */
+    var re = arr.concat([1, [2, 3, [4]], 5]);
+    console.log(re);//(12) [1, 2, 3, 4, 5, 6, 7, 1, "a", 1, Array(3), 5]
+
+    var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+    console.log(arr);
+    var re = arr.splice(3, 0, "abc")
+    console.log(arr);
+    var re = arr.splice(5, 0, "a", 1)
+    console.log(arr);
+
+  </script>
+</body>
+
+</html>

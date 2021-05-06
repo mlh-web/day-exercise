@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 默认：解析时碰到外部引入的js，会停止解析html，开始下载js，并解析js
+  defer:碰到外部引入的js，不会停止解析html，会异步下载js，等解析完了所有的html文件，再按顺序解析js
+  async：碰到外部引入的js，不会停止解析html,会异步下载js，但是一旦有js文件下载完成，就会终止html文件，开始解析当前的js -->
+  <!-- <script src="./1.js" defer></script> -->
+  <script src="1.js" async></script>
+</head>
+<body>
+  <div id="box">
+    哈哈哈哈哈哈
+  </div>
+  <!-- <script>
+    var obox = document.getElementById("box");
+    obox.style.background = "blue";
+  </script> -->
+
+  <!-- 外部引入 -->
+  <!-- <script src="./1.js">
+  </script> -->
+</body>
+</html>

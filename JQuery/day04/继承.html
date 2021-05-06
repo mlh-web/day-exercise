@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    js继承：
+    当一个对象可以使用另外一个对象的属性和方法的时候，我们称作为继承
+    */
+
+    /*
+    js继承：面向对象中的继承（类的继承）
+    */
+    //封装一个Person类（父类，超类）
+    function Person(name, age, sex) {
+      this.name = name;
+      this.age = age;
+      this.sex = sex;
+    }
+    function Student(ClassRoom, name, age, sex) {
+      Person.call(this, name, age, sex)
+      this.classRoom = classRoom;
+    }
+    var s1 = new Student('312', 'zhangsan', 18, 'nan')
+    var p1 = new Person();
+  </script>
+</body>
+
+</html>

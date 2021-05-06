@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      #radio {
+        list-style-type: none;
+        margin: 100px auto;
+        padding: 0px;
+        width: 500px;
+      }
+      ul li{
+            width:400px;
+            height:30px;
+            /* border:1px solid green; */
+            margin-top:20px;
+        }
+      #radio input{
+        display: none;
+      }
+      #radio input+label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 30px;
+        margin-top: 10px;
+        border: 1px solid red;
+      }
+      #radio li label::before {
+        float: left;
+        content: '';
+        width: 30px;
+        height: 30px;
+        border: 1px solid #de8650; 
+        margin-right: 10px;
+      }
+      #radio li input:checked + label::before {
+        content: '√';
+        color: #fff;
+        background-color: #de8650;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="radio">
+      <li>
+        <input type="radio" name="looks" id="looks1"/><label for="look1">静哥真帅！</label>
+      </li>
+      <li>
+        <input type="radio" name="looks" id="looks2"/><label for="look2">静哥真英俊！</label>
+        </li>
+      <li>
+        <input type="radio" name="looks" id="looks3"/><label for="look3">静哥又帅又英俊！</label>
+        </li>
+      <li>
+        <input type="radio" name="looks" id="looks4"/><label for="look4">闫海静真丑！</label>
+        </li>
+    </ul>
+  </body>
+</html>

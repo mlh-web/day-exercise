@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    replace(a,b):a是匹配字符串的字符，b是替换的内容
+
+    一般a是一个正则匹配
+    */
+    var str = "123456789"
+    var re = str.replace("3", "ab");
+    console.log(re);//12ab456789
+
+    var reg = /帅气|帅哥|好/gi;
+    var str = "张三长得很帅气，是个帅哥，人也很好";
+    var re = str.replace(reg, "**");
+    console.log(re);
+  </script>
+</body>
+
+</html>
