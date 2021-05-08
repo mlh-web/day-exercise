@@ -174,7 +174,7 @@
 
 
 
-    const promise = new Promise((resolve, reject) => {
+    /* const promise = new Promise((resolve, reject) => {
       resolve("success1");
       reject("error");
       resolve("success2");
@@ -184,6 +184,22 @@
         console.log("then: ", res);
       }).catch(err => {
         console.log("catch: ", err);
+      }) */
+
+
+    const promise = new Promise((resolve, reject) => {
+      reject("error");
+      resolve("success2");
+    });
+    promise
+      .then(res => {
+        console.log("then1: ", res);
+      }).then(res => {
+        console.log("then2: ", res);
+      }).catch(err => {
+        console.log("catch: ", err);
+      }).then(res => {
+        console.log("then3: ", res);
       })
 
 
