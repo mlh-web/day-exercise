@@ -104,10 +104,104 @@
     }) */
 
 
-    const promise = Promise.resolve().then(() => {
+    /* const promise = Promise.resolve().then(() => {
       return promise;
     })
-    promise.catch(console.err)
+    promise.catch(console.err) */
+
+
+    /* Promise.resolve(1)
+      .then(2)
+      .then(Promise.resolve(3))
+      .then(console.log) */
+
+
+    /* Promise.reject('err!!!')
+      .then((res) => {
+        console.log('success', res)
+      }, (err) => {
+        console.log('error', err)
+      }).catch(err => {
+        console.log('catch', err)
+      }) */
+
+
+    /* Promise.reject('error!!!')
+      .then((res) => {
+        console.log('success', res)
+      }).catch(err => {
+        console.log('catch', err)
+      }) */
+
+
+    /* Promise.resolve()
+      .then(function success(res) {
+        throw new Error('error!!!')
+      }, function fail1(err) {
+        console.log('fail1', err)
+      }).catch(function fail2(err) {
+        console.log('fail2', err)
+      }) */
+
+
+    /* Promise.resolve('1')
+      .then(res => {
+        console.log(res)
+      })
+      .finally(() => {
+        console.log('finally')
+      })
+    Promise.resolve('2')
+      .finally(() => {
+        console.log('finally2')
+        return '我是finally2返回的值'
+      })
+      .then(res => {
+        console.log('finally2后面的then函数', res)
+      }) */
+
+
+    /* Promise.resolve('1')
+      .finally(() => {
+        console.log('finally1')
+        throw new Error('我是finally中抛出的异常')
+      })
+      .then(res => {
+        console.log('finally后面的then函数', res)
+      })
+      .catch(err => {
+        console.log('捕获错误', err)
+      }) */
+
+
+    function promise1() {
+      let p = new Promise((resolve) => {
+        console.log('promise1');
+        resolve('1')
+      })
+      return p;
+    }
+    function promise2() {
+      return new Promise((resolve, reject) => {
+        reject('error')
+      })
+    }
+    promise1()
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+      .finally(() => console.log('finally1'))
+
+    promise2()
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+      .finally(() => console.log('finally2'))
+
+
+
+
+
+
+
 
 
 
