@@ -3,6 +3,7 @@
   // 引入express
   const express = require('express')
   const router = require('./routers/logicRouter')
+  const cors = require('cors')
 
   //引入连接数据库的代码
   await require('./db/db')
@@ -14,6 +15,8 @@
   app.use(express.urlencoded({
     extended: true
   }))
+
+  app.use(cors())
 
   app.use(router)
 

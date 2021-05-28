@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 'use strict'
+    /* func = () => {
+      // 这里 this 指向取决于外层 this，参考口诀 7 「不在函数里」
+      console.log(this)
+    }
+    // function func() {
+    //   console.log(this);
+    // }
+
+    func.bind(1)() */
+
+    /* function Person(name) {
+      this.name = name
+    }
+
+    var p1 = new Person('www') */
+
+    /*  function func() {
+       console.log(this, this.__proto__ === func.prototype)
+     }
+ 
+     boundFunc = func.bind(1)
+     console.log(boundFunc, 'boundFunc')
+     new boundFunc()  */// Object true，口诀 2 优先
+    //创建对象 修改this
+
+    /* function outerFunc() {
+      console.log(this) // { x: 1 }
+
+      function func() {
+        console.log(this) // Window
+      }
+
+      func()
+    }
+
+    outerFunc.bind({ x: 1 })() */
+
+    /* function func(num) {
+      this.count++
+    }
+
+    func.count = 0
+    func(1) */
+
+    /* obj = {
+      func() {
+        const arrowFunc = () => {
+          console.log(this,this._name)
+        }
+
+        return arrowFunc
+      },
+
+      _name: "obj",
+    }
+
+    obj.func()()
+
+    func = obj.func
+    func()()
+
+    obj.func.bind({ _name: "newObj" })()()
+
+    obj.func.bind()()()
+
+    obj.func.bind({ _name: "bindObj" }).apply({ _name: "applyObj" })() */
+
+
+    /* function gasfsdf() {
+
+    }
+    console.log(new gasfsdf) */
+
+
+    function foo() {
+      this.b = 100;
+      return console.log(this.a);
+    }
+    var func = foo.bind({ a: 1 });
+    // func();//1
+    let c = new func();
+    console.log(c)
+
+
+  </script>
+</body>
+
+</html>

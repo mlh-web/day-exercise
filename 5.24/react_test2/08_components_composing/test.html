@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>05_components_composing</title>
+</head>
+
+<body>
+
+  <div id="example"></div>
+
+  <script type="text/javascript" src="../js/react.development.js"></script>
+  <script type="text/javascript" src="../js/react-dom.development.js"></script>
+  <script type="text/javascript" src="../js/prop-types.js"></script>
+  <script type="text/javascript" src="../js/babel.min.js"></script>
+  <script type="text/babel">
+    /* 
+    开发流程：
+    1.拆分组件：按照用户界面的功能或变化来拆分组件
+    App
+    AddTodo
+    TodoList
+    2.实现静态组件
+    3.实现动态组件
+    */
+    class App extends React.Component {
+      state = {
+        todoList: ['吃饭', '睡觉',]
+      }
+      addTodo = (todo) => {
+        // 想要更新用户界面，必须调用setState方法
+        const { todoList } = this.state
+        this.setState({
+          todoList: [todo, ...todoList]
+        })
+      }
+      render() {
+        const { todoList } = this.state
+        return <div>
+          <h1>TodoList</h1>
+          <AddTodo length={todoList.length} addTodo={this.addTodo} />
+          <TodoList todoList={todoList} />
+        </div>
+      }
+    }
+
+    class AddTodo extends React.Component {
+      static propTypes = {
+        length: PropTypes.number.isRequired,
+        addTodo: PropTypes.func.isRequired,
+      }
+
+      state = {
+        todo: ''
+      }
+      setTodo = (event) => {
+        const todo = event.target.value.trim()
+        this.setState({
+          todo,
+        })
+      }
+      add = () => {
+        const { todo } = this.state
+
+        if (!todo) {
+          alert('请输入待办事项')
+          return
+        }
+        this.props.addTodo(todo)
+        this.setState({
+          todo: ''
+        })
+      }
+
+      render() {
+        const { length } = this.props
+        const { todo } = this.state
+        return <div>
+          <input type="text" onChange={this.setTodo} value={todo} />
+          <button onClick={this.add}>Add #{length}</button>
+        </div>
+      }
+    }
+
+    class TodoList extends React.Component {
+      static propTypes = {
+        todoList: PropTypes.array.isRequired
+      }
+      render() {
+        const { todoList } = this.props
+        return <ul>
+          {todoList.map((todo, index) => {
+            return <li key={index}>{todo}</li>
+          })}
+        </ul>
+      }
+    }
+
+    // 渲染页面
+    ReactDOM.render(<App />, document.getElementById('example'))
+  </script>
+</body>
+
+</html>

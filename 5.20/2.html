@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* function Person(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    Person.prototype.sayName = function () {
+      return this.name;
+    }
+
+    const xiaoming = new Person('小明', 18,);
+    console.log(xiaoming); */
+
+    /* class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      sayName() {
+        return this.name;
+      }
+    }
+    const xiaoming = new Person('小明', 18)
+    console.log(xiaoming);
+    // { name: '小明', age: 18 }
+
+    console.log((typeof Person));
+    // function
+    console.log(Person === Person.prototype.constructor);
+// true */
+
+
+    /* class Person {
+      constructor(name) {
+        this.name = name
+      }
+    }
+
+    const member = new Person("John")
+    console.log(typeof member)//Object */
+
+
+    /* class Chameleon {
+      static colorChange(newColor) {
+        this.newColor = newColor
+        return this.newColor
+      }
+
+      constructor({ newColor = 'green' } = {}) {
+        this.newColor = newColor
+      }
+    }
+
+    const freddie = new Chameleon({ newColor: 'purple' })
+    freddie.colorChange('orange') */
+
+    class Person {
+      constructor() {
+        this.name = "Lydia"
+      }
+    }
+
+    Person = class AnotherPerson {
+      constructor() {
+        this.name = "Sarah"
+      }
+    }
+
+    const member = new Person()
+    console.log(member.name)
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

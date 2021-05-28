@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="example1"></div>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/prop-types.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type="text/babel">
+      /*
+       需求：自定义用来显示一个人员信息的组件，效果如页面，说明
+         1.如果性别没有指定，默认为男
+         2.如果年龄没有指定，默认为18
+       */
+      const person = {
+        name: "路人甲",
+        age: 18,
+        sex: "女",
+      };
+
+      /* class Test {
+        //  定义a属性，在类的直接属性上 Test.a
+        static a = {};
+        // 在实例对象直接属性上 this.b
+        b = () => {};
+        // 在类的原型对象上 this.c
+        c() {}
+      } */
+
+      // 定义组件
+      class Person extends React.Component {
+        static propTypes = {
+          name: PropTypes.string.isRequired,
+          age: PropTypes.number,
+          sex: PropTypes.oneOf(["男", "女"]),
+        };
+        static defaultProps = {
+          age: 18,
+          sex: "男",
+        };
+        render() {
+          const { name, age, sex } = this.props;
+          return (
+            <ul>
+              <li>姓名：{name}</li>
+              <li>性别：{age}</li>
+              <li>年龄：{sex}</li>
+            </ul>
+          );
+        }
+      }
+
+      // 类型限制和必要性限制
+      // 需要加载一个库，prop-type 全局多一个变量 PropTypes
+
+      ReactDOM.render(
+        // <Person name={person.name} sex={person.sex} age={person.age} />,
+        <Person {...person} />,
+        document.getElementById("example1")
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>02_JSX</title>
+</head>
+
+<body>
+  <div id="test1"></div>
+  <div id="test2"></div>
+
+  <script src="../js/react.development.js"></script>
+  <script src="../js/react-dom.development.js"></script>
+
+
+  <script>
+    // 创建虚拟DOM对象
+
+    const p = React.createElement("p", {}, "hello p")
+
+    const div = React.createElement("div", { id: "box", className: "text" }, "hello div", p)
+
+    // 将虚拟对象渲染到指定的容器内部
+    ReactDOM.render(div, document.getElementById("test1"))
+  </script>
+
+  <script src="../js/babel.min.js"></script>
+  <script type=text/babel>
+  // 使用jsx语法创建虚拟DOM对象
+  const vDOM=<div id="container" className="box">
+    <p>hello p~~~</p>
+    <p>hello p~~~</p>
+    <p>hello p~~~</p>
+    </div>
+
+    // 将虚拟对象渲染到指定容器内部
+    ReactDOM.render(vDOM,document.getElementById("test2"))
+  </script>
+
+</body>
+
+</html>

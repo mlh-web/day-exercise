@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="example"></div>
+  <script src="../js/react.development.js"></script>
+  <script src="../js/react-dom.development.js"></script>
+  <script src="../js/prop-types.js"></script>
+  <script src="../js/babel.min.js"></script>
+  <script type=text/babel>
+  /* 
+  需求: 自定义组件
+    1. 让指定的文本做显示/隐藏的动画
+    2. 切换时间为2S
+    3. 点击按钮从界面中移除组件界面
+  */
+ class LifeCircle extends React.Component{
+   state={
+     opacity:1
+   }
+   componentDidMount(){
+     this.timeId=setInterval(()=>{
+       let {opacity}=this.state
+       opacity -= 0.1
+       if(opacity<=0){
+         opacity=1;
+       }
+       this.setState({
+         opacity,
+       })
+     },200)
+   }
+
+   componentWillUnmount(){
+     clearInterval(this.timeId);
+   }
+   goDie=()=>{
+     ReactDOM.unmountComponentAtNode(document.getElementById("example"))
+   }
+   render(){
+     const {opacity}=this.state
+     return <div>
+      <p style={{opacity,fontSize:24}}>React学不会怎么办？</p>
+      <button onClick={this.goDie}>go die</button>
+      </div>
+   }
+ }
+ ReactDOM.render(<LifeCircle/>,document.getElementById('example'))
+  </script>
+</body>
+</html>

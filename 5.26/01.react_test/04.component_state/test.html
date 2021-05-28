@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type="text/babel">
+      /*
+      需求：自定义组件，功能如下
+        1.显示h2标题，初始文本为：你喜欢我
+        2.点击标题更新为：我喜欢你
+      */
+      class LikeMe extends React.Component {
+        state = {
+          isLikeMe: true,
+        };
+
+        setIsLikeMe = () => {
+          this.setState({
+            isLikeMe: !this.state.isLikeMe,
+          });
+        };
+
+        render() {
+          const { isLikeMe } = this.state;
+          return (
+            <h1 onClick={this.setIsLikeMe}>
+              {isLikeMe ? "你喜欢我" : "我喜欢你"}
+            </h1>
+          );
+        }
+      }
+      ReactDOM.render(<LikeMe />, document.getElementById("example"));
+    </script>
+  </body>
+</html>

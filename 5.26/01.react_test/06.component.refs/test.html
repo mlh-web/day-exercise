@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/prop-types.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type="text/babel">
+      /* 
+    ref作用：
+      1.给普通元素绑定，获取到对应的真实DOM元素
+      2.给组件绑定，获取到对应的组件实例对象
+
+      如果触发事件元素和要获取的DOM元素是同一元素，可以用event.target获取
+      如果触发事件元素和要获取的DOM元素不是同一元素，可以用ref获取
+    */
+      class Test extends React.Component {
+        render() {
+          return <p>Test~~~</p>;
+        }
+      }
+      class Form extends React.Component {
+        inputRef = React.createRef();
+        compRef = React.createRef();
+        handleClick = () => {
+          console.log(this.compRef.current);
+          alert(this.inputRef.current.value);
+        };
+        handleBlur = (e) => {
+          alert(e.target.value);
+        };
+
+        render() {
+          return (
+            <div>
+              <input type="text" ref={this.inputRef} />
+              <button onClick={this.handleClick}>点击提示文字</button>
+              <input
+                type="text"
+                onBlur={this.handleBlur}
+                placeholder="失去焦点提示数据"
+              />
+              <Test ref={this.compRef} />
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<Form />, document.getElementById("example"));
+    </script>
+  </body>
+</html>

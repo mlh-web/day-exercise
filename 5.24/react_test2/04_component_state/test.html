@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>07_component_state</title>
+</head>
+
+<body>
+
+  <div id="example"></div>
+
+  <script type="text/javascript" src="../js/react.development.js"></script>
+  <script type="text/javascript" src="../js/react-dom.development.js"></script>
+  <script type="text/javascript" src="../js/babel.min.js"></script>
+
+  <script type="text/babel">
+    /*
+    需求: 自定义组件, 功能说明如下
+      1. 显示h2标题, 初始文本为: 你喜欢我
+      2. 点击标题更新为: 我喜欢你
+    */
+
+    // 定义组件
+    class LikeMe extends React.Component {
+      constructor() {
+        super();
+        this.state = {
+          isLikeMe: true,
+        }
+      }
+      render() {
+        const { isLikeMe } = this.state
+        // 定义事件回调函数
+        function setIsLikeMe () {
+          // this.state.isLikeMe = !isLikeMe
+          this.setState({
+            isLikeMe: !this.state.isLikeMe,
+          })
+        }
+        return <h1 onClick={this.setIsLikeMe}>{isLikeMe ? '你喜欢我' : '我喜欢你'}</h1>
+      }
+    }
+
+    // 将组件渲染到指定容器中
+    ReactDOM.render(<LikeMe />, document.getElementById('example'))
+  </script>
+</body>
+
+</html>

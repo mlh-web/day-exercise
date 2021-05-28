@@ -1,0 +1,1 @@
+import { name,fn } from './js/module1'
